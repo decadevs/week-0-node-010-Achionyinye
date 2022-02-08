@@ -16,9 +16,7 @@ function getMaxPair(noOfWashes, cleanPile, dirtyPile) {
     maxAnneCanTake = noOfWashes === 0 ? 1 : noOfWashes === Infinity ? 4 : 50;
   
     for (let i = 0; i < cleanPile.length; i++) {
-      if (
-        !countOfCleanPile[cleanPile[i]] ||
-        countOfCleanPile[cleanPile[i]] === 0
+      if (!countOfCleanPile[cleanPile[i]] || countOfCleanPile[cleanPile[i]] === 0
       ) {
         countOfCleanPile[cleanPile[i]] = 1;
       } else if (countOfCleanPile[cleanPile[i]] === 1) {
